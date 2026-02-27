@@ -18,4 +18,4 @@ def draw_pie_chart(numbers: list[int]) -> Image:
     buffer = io.BytesIO()
     plt.savefig(buffer, format='png')
     
-    return Image(buffer.getvalue(), format='png')
+    return Image(data=buffer.getvalue(), format='png')
